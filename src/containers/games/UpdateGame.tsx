@@ -6,6 +6,7 @@ const UpdateGame = () => {
         e.preventDefault();
         console.log('update');
     }
+    
     return (
         <div>
             update game

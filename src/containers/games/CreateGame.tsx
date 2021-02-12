@@ -3,6 +3,7 @@ import GameForm from '../../components/game/GameForm';
 
 const CreateGame = () => {
     const handleBtnClicked = (e: MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
         console.log('clicked');
     }
     
