@@ -6,6 +6,7 @@ import Contact from '../../components/contact/Contact';
 import Home from '../../components/home/Home';
 import Sidebar from '../../components/sidebar/Sidebar';
 import Games from '../games/Games';
+import CreateGame from '../games/CreateGame';
 import Players from '../player/Players';
 
 const MainContent = () => {
@@ -19,6 +20,7 @@ const MainContent = () => {
                 <div className="ml-auto mt-3 col-9">
                     <Switch>
                         {/* home */}
+                        <Route path="/home/games/create" component={CreateGame} />
                         <Route path="/home/games" component={Games} />
                         <Route path="/home/players" component={Players} />
                         <Route path="/home" component={Home} />

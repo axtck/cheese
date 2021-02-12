@@ -1,6 +1,6 @@
 import React from 'react';
 
-type HeaderProps = {
+interface HeaderProps {
     title: string,
 }
 

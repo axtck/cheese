@@ -1,6 +1,4 @@
-import React, { MouseEvent, useState } from 'react';
-import { useHistory } from 'react-router-dom';
-import SidebarNavElement from './SidebarNavElement';
+import React from 'react';
 
 const Sidebar = () => {
 
@@ -14,6 +12,11 @@ const Sidebar = () => {
             label: "Players",
             route: "/home/players",
         },
+        {
+            label: "Submit game",
+            route: "/home/games/create",
+        },
+
     ];
 
 
@@ -21,11 +24,7 @@ const Sidebar = () => {
      * Render
      **************/
     const sideBarLis = routes.map((r, i) => {
-        return <SidebarNavElement
-            key={i}
-            label={r.label}
-            route={r.route}
-        />
+        return <a className="list-group-item" key={i} href={r.route}>{r.label}</a>
     });
 
     return (
