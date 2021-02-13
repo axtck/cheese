@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import Header from './components/header/Header';
 import MainContent from './containers/content/MainContent';
 
-function App() {
+interface AppProps { };
+
+const App: FunctionComponent<AppProps> = () => {
   const title: string = "Cheese";
 
   return (

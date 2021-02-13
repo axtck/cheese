@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import About from '../../components/about/About';
 import Contact from '../../components/contact/Contact';
@@ -9,10 +9,11 @@ import Games from '../games/Games';
 import CreateGame from '../games/CreateGame';
 import Players from '../player/Players';
 
-const MainContent = () => {
+interface MainContentProps { };
+
+const MainContent: FunctionComponent<MainContentProps> = () => {
     return (
         <div className="container">
-
             <div className="row">
                 <div className="col-2 mt-2">
                     <Sidebar />
@@ -30,8 +31,6 @@ const MainContent = () => {
 
                         {/* contact */}
                         <Route path="/contact" component={Contact} />
-
-
 
                         {/* redirects */}
                         <Redirect to="/" />

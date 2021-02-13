@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
 interface HeaderProps {
     title: string,
 }
 
-const Header = ({ title }: HeaderProps) => {
+const Header: FunctionComponent<HeaderProps> = ({ title }) => {
 
     // labels and routes
     const routes = [

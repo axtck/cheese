@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
-const Home = () => {
+interface HomeProps { };
+
+const Home: FunctionComponent<HomeProps> = () => {
     return (
         <div>
             home

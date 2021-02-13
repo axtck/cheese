@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
-const Contact = () => {
+interface ContactProps { };
+
+const Contact: FunctionComponent<ContactProps> = () => {
     return (
         <div>
-            
             contact
-
         </div>
     )
 }

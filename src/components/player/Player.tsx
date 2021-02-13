@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
-const Player = () => {
+interface PlayerProps { };
+
+const Player: FunctionComponent<PlayerProps> = () => {
     return (
         <div>
             player

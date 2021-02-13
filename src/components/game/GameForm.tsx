@@ -1,4 +1,4 @@
-import React, { ChangeEvent, MouseEvent, useState } from 'react';
+import React, { ChangeEvent, FunctionComponent, MouseEvent, useState } from 'react';
 
 interface GameFormProps {
     formType: string;
@@ -11,7 +11,7 @@ interface GameInfoProps {
     blackPlayer: string;
 }
 
-const GameForm = ({ formType, onBtnClick }: GameFormProps) => {
+const GameForm: FunctionComponent<GameFormProps> = ({ formType, onBtnClick }) => {
     const [gameInfo, setGameInfo] = useState<GameInfoProps>({ whitePlayer: "", blackPlayer: "" });
 
     const handelSelectChanged = (e: ChangeEvent<HTMLSelectElement>, player: string) => {

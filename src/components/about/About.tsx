@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
-const About = () => {
+interface AboutProps { };
+
+const About: FunctionComponent<AboutProps> = () => {
     return (
         <div>
             <h3>About</h3>

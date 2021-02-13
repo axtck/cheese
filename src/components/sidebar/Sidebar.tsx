@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
-const Sidebar = () => {
+interface SidebarProps { };
+
+const Sidebar: FunctionComponent<SidebarProps> = () => {
 
     // labels and routes
     const routes = [

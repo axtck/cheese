@@ -1,7 +1,9 @@
-import React, { MouseEvent } from 'react';
+import React, { FunctionComponent, MouseEvent } from 'react';
 import GameForm from '../../components/game/GameForm';
 
-const CreateGame = () => {
+interface CreateGameProps {};
+
+const CreateGame: FunctionComponent<CreateGameProps> = () => {
     const handleBtnClicked = (e: MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
         console.log('clicked');
