@@ -1,17 +1,17 @@
-import React, { FunctionComponent, MouseEvent } from 'react';
+import React, { FunctionComponent } from 'react';
 import GameForm from '../../components/game/GameForm';
+import { GameType } from '../../types';
 
 interface UpdateGameProps { };
 
 const UpdateGame: FunctionComponent<UpdateGameProps> = () => {
-    const handleBtnClicked = (e: MouseEvent<HTMLButtonElement>) => {
-        e.preventDefault();
-        console.log('update');
+    
+    const handleBtnClicked = (game: GameType): void => {
+        console.log(game);
     }
 
     return (
         <div>
-            update game
             <GameForm formType="update" onBtnClick={handleBtnClicked} />
         </div>
     )

@@ -9,16 +9,16 @@ const Header: FunctionComponent<HeaderProps> = ({ title }) => {
     // labels and routes
     const routes = [
         {
-            label: "home",
+            label: "Home",
             route: "/home",
         },
         {
-            label: "about",
+            label: "About",
             route: "/about",
         },
         {
-            label: "contact",
-            route: "/contact",
+            label: "My account",
+            route: "/account",
         },
     ];
 

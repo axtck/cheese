@@ -1,13 +1,14 @@
 import React, { FunctionComponent } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import About from '../../components/about/About';
-import Contact from '../../components/contact/Contact';
-
+import Account from '../../components/account/Account';
 import Home from '../../components/home/Home';
 import Sidebar from '../../components/sidebar/Sidebar';
 import Games from '../games/Games';
 import CreateGame from '../games/CreateGame';
 import Players from '../player/Players';
+import SearchGame from '../games/SearchGame';
+import UpdateGame from '../games/UpdateGame';
 
 interface MainContentProps { };
 
@@ -21,7 +22,9 @@ const MainContent: FunctionComponent<MainContentProps> = () => {
                 <div className="ml-auto mt-3 col-9">
                     <Switch>
                         {/* home */}
+                        <Route path="/home/games/search" component={SearchGame} />
                         <Route path="/home/games/create" component={CreateGame} />
+                        <Route path="/home/games/update" component={UpdateGame} />
                         <Route path="/home/games" component={Games} />
                         <Route path="/home/players" component={Players} />
                         <Route path="/home" component={Home} />
@@ -30,7 +33,7 @@ const MainContent: FunctionComponent<MainContentProps> = () => {
                         <Route path="/about" component={About} />
 
                         {/* contact */}
-                        <Route path="/contact" component={Contact} />
+                        <Route path="/account" component={Account} />
 
                         {/* redirects */}
                         <Redirect to="/" />

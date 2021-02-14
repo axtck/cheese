@@ -2,12 +2,12 @@ import React, { FunctionComponent } from 'react';
 
 interface ContactProps { };
 
-const Contact: FunctionComponent<ContactProps> = () => {
+const Account: FunctionComponent<ContactProps> = () => {
     return (
         <div>
-            contact
+            account
         </div>
     )
 }
 
-export default Contact;
+export default Account;

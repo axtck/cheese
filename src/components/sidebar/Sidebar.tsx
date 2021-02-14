@@ -15,10 +15,13 @@ const Sidebar: FunctionComponent<SidebarProps> = () => {
             route: "/home/players",
         },
         {
+            label: "Search game",
+            route: "/home/games/search",
+        },
+        {
             label: "Submit game",
             route: "/home/games/create",
         },
-
     ];
 
 
