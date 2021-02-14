@@ -9,7 +9,7 @@ interface GameFormProps {
 const GameForm: FunctionComponent<GameFormProps> = ({ formType, onBtnClick }) => {
 
     // inputs state
-    const [game, setGame] = useState<GameType>({ pgn: "", name: "" });
+    const [game, setGame] = useState<GameType>({ name: "", pgn: "" });
 
     // validation state
     const [valid, setValid] = useState<Boolean>(false);
@@ -17,7 +17,7 @@ const GameForm: FunctionComponent<GameFormProps> = ({ formType, onBtnClick }) =>
 
     // setting validation based on input
     useEffect(() => {
-        if (game.pgn) {
+        if (game.name && game.pgn) {
             setValid(true);
         } else {
             setValid(false);
@@ -48,6 +48,7 @@ const GameForm: FunctionComponent<GameFormProps> = ({ formType, onBtnClick }) =>
         }
     }
 
+
     /**********
      * Render
      **********/
@@ -62,10 +63,23 @@ const GameForm: FunctionComponent<GameFormProps> = ({ formType, onBtnClick }) =>
         <form>
             <div className="form-group">
                 <h3>{titleFormType} game.</h3>
-                <label className="mt-3" htmlFor="input-name">PGN</label>
-                <input className="form-control" type="text" value={game.name} id="input-name" name="name" onChange={handleTextAreaChanged}></input>
+                <label className="mt-3" htmlFor="input-name">Name</label>
+                <input
+                    className="form-control"
+                    id="input-name"
+                    type="text"
+                    name="name"
+                    value={game.name}
+                    onChange={handleTextAreaChanged}
+                ></input>
                 <label className="mt-3" htmlFor="textarea-moves">PGN</label>
-                <textarea className="form-control" value={game.pgn} id="textarea-moves" rows={3} name="pgn" onChange={handleTextAreaChanged}></textarea>
+                <textarea
+                    className="form-control" id="textarea-moves"
+                    name="pgn"
+                    value={game.pgn}
+                    rows={3}
+                    onChange={handleTextAreaChanged}
+                ></textarea>
             </div>
             <button className={validClass} onClick={handleBtnClicked}>{capFormType}</button>
         </form>

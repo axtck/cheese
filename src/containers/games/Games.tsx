@@ -6,7 +6,7 @@ import { GameType } from '../../types';
 interface GamesProps { };
 
 const Games: FunctionComponent<GamesProps> = () => {
-    const [games, setGames] = useState<Array<GameType>>([{ pgn: "", name: "" }]);
+    const [games, setGames] = useState<Array<GameType>>([{ name: "", pgn: "" }]);
 
     useEffect(() => {
         api.get('/games'

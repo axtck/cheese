@@ -2,21 +2,22 @@ import React, { FunctionComponent } from 'react';
 import GameForm from '../../components/game/GameForm';
 import api from '../../api/api';
 import { GameType } from '../../types';
+import { useHistory } from 'react-router-dom';
 
 interface CreateGameProps { };
 
 const CreateGame: FunctionComponent<CreateGameProps> = () => {
+    const history = useHistory();
 
     const handleBtnClicked = (game: GameType): void => {
         api.post('/games',
             game // pass game to post
         ).then((response) => {
             console.log(response);
+            history.push('/home/games');
         }).catch((error) => {
             console.log(error);
-        }).finally(() => {
-            console.log('finally');
-        });
+        })
     }
 
     return (
